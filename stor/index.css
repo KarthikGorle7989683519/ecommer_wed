@@ -1,0 +1,190 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f8f9fa; /* Bootstrap's light gray */
+    color: #212529; /* Bootstrap's default text color */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Custom search form width in header */
+.search-form-bs {
+    min-width: 300px; /* Adjust as needed */
+}
+@media (max-width: 991.98px) { /* lg breakpoint */
+    .search-form-bs {
+        min-width: auto;
+        width: 100%;
+    }
+}
+
+
+/* Home Page Specific Content (Bootstrap adjusted) */
+.home-page-content-bootstrap {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.home-welcome-banner-bootstrap {
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* Category Navigation View */
+.category-card-bs {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.category-card-bs:hover {
+    border-color: #0d6efd; /* Bootstrap primary */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+.category-image-bs {
+    height: 120px;
+    object-fit: contain; /* Changed to contain to see more of the image */
+    background-color: #f8f9fa;
+}
+.category-name-bs {
+    font-weight: 500;
+    color: #0d6efd;
+    font-size: 0.9rem;
+}
+
+
+/* Product Card */
+.product-card-bs {
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.product-card-bs:hover {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    transform: translateY(-3px);
+}
+.product-image-bs {
+    height: 200px;
+    object-fit: cover; /* Or contain, depending on preference */
+    background-color: #eee;
+}
+.details-hidden-bs .card-text.small,
+.details-hidden-bs .fw-bold.fs-5,
+.details-hidden-bs .badge.bg-secondary {
+    display: none !important;
+}
+
+/* Cart Item */
+.cart-item-bs {
+    /* Styles for individual cart items if needed beyond Bootstrap cards */
+}
+.cart-item-image-bs {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* Checkout Form */
+.checkout-form-bs {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: .375rem; /* Bootstrap's default border-radius */
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+
+/* Admin Product Item Actions */
+.admin-product-actions-bs .form-control-sm {
+    max-width: 80px;
+}
+
+/* Add Product View */
+.add-product-view-bs {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* Chatbot Specific Styles - Can be more custom */
+.chatbot-fab-bs {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem; /* For the icon */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1040; /* Below modals (1050), above most content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chatbot-window-bs {
+    height: 70vh !important; /* Override default offcanvas height if needed */
+    max-height: 500px; /* Max height for chat */
+    width: 380px !important; /* Override default offcanvas width */
+    border-left: 1px solid rgba(0,0,0,.2);
+    z-index: 1045; /* Above FAB, below modals */
+}
+
+.chatbot-messages-bs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.chat-message-bs {
+    max-width: 80%;
+    word-wrap: break-word;
+    line-height: 1.4;
+    padding: 0.6rem 0.9rem !important; /* Ensure padding for Bootstrap variants */
+}
+.chat-message-bs.bg-light { /* User messages */
+    border-bottom-right-radius: .25rem !important; /* Custom rounding */
+    border-top-left-radius: .75rem !important;
+    border-bottom-left-radius: .75rem !important;
+}
+.chat-message-bs.bg-primary { /* Assistant messages */
+    border-bottom-left-radius: .25rem !important;
+    border-top-right-radius: .75rem !important;
+    border-bottom-right-radius: .75rem !important;
+}
+.chat-message-bs.bg-danger-subtle { /* Error messages */
+    border-bottom-left-radius: .25rem !important;
+    border-top-right-radius: .75rem !important;
+    border-bottom-right-radius: .75rem !important;
+}
+
+
+/* Ensure auth message is above content */
+.alert {
+    position: sticky;
+    top: 80px; /* Adjust based on your header height */
+    z-index: 1020; /* Below header, above most content */
+}
+
+/* Footer ensures it's at the bottom */
+/* body already has display:flex, flex-direction:column, min-height:100vh */
+/* #root already has display:flex, flex-direction:column, flex-grow:1 */
+/* main.container already has flex-grow:1 */
+/* Footer's mt-auto will push it to the bottom */
+
+/* Small adjustments for list group items in admin view for better wrapping */
+@media (max-width: 575.98px) { /* sm breakpoint */
+    .admin-product-actions-bs {
+        width: 100%;
+        margin-top: 0.5rem;
+        justify-content: flex-start;
+    }
+}

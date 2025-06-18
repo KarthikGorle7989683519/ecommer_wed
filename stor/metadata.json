@@ -1,0 +1,6 @@
+
+{
+  "name": "GeminiStore - AI E-commerce",
+  "description": "An AI-enhanced e-commerce application frontend using React, TypeScript, and the Gemini API for product generation and customer chat.",
+  "requestFramePermissions": []
+}
